@@ -1,0 +1,191 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./assets/images/58a0f4172c6f47a9c84f6ae201cbbe35.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content button {
+  background-color: #00ff00;
+  color: black;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.5s ease;
+}
+
+.hero-content button:hover {
+  background-color: #00cc0071;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.review-section {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Align items vertically */
+  gap: 30px; /* Space between left and right columns */
+  padding: 20px;
+  color: white;
+}
+
+.left-column {
+  flex: 1; /* Takes up available space */
+  text-align: left;
+}
+
+.left-column h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00ff00;
+  font-family: "Orbitron", sans-serif;
+}
+
+.left-column ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.left-column li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: black;
+  font-family: "Orbitron", sans-serif;
+}
+
+.left-column .rating {
+  margin-top: 15px;
+  color: lightgray;
+  font-family: "Orbitron", sans-serif;
+}
+
+.right-column {
+  flex: 1; /* Ensures image aligns with the left column */
+  display: flex;
+  justify-content: center; /* Center-align image horizontally */
+}
+
+.image-container {
+  width: 100%; /* Take full width of the column */
+  height: 300px; /* Set a fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff00;
+  background: black; /* Optional background for better contrast */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image stretches proportionally */
+}
+
+/* Footer for Keyboard Details */
+.details-footer {
+  background-color: darkgray; /* Dark footer background for contrast */
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.keyboard-details {
+  max-width: 800px;
+  margin: 0 auto; /* Center content in the footer */
+}
+
+.keyboard-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #00ff00;
+  font-family: "Orbitron", sans-serif;
+}
+
+.keyboard-details p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: lightgray;
+  font-family: "Orbitron", sans-serif;
+}
+
+.keyboard-details .highlight {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ff00;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+    background-position: center-top;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .hero-content button {
+    font-size: 0.6rem 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .review-section {
+      flex-direction: column; /* Stack columns vertically */
+      gap: 20px;
+    }
+
+    .left-column,
+    .right-column {
+      text-align: left; /* Align text to the left on smaller screens */
+    }
+
+    .right-column img {
+      max-width: 80%; /* Scale image down */
+    }
+
+    .keyboard-details h3 {
+      font-size: 1.5rem; /* Reduce title size */
+    }
+
+    .keyboard-details p {
+      font-size: 0.9rem;
+    }
+  }
+}
